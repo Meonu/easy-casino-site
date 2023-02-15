@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Store</title>
+    <link rel="stylesheet" type="text/css" href="store.css">
+</head>
+<body>
+    <h1>Store</h1>
+    <p>Your current balance is: ${{ money }}</p>
+    <form method="POST" action="/buy_flag">
+        <button type="submit" name="buy_flag" value="1">Buy Flag for $100,000,000</button>
+    </form>
+    {% if message %}
+    <p>{{ message }}</
