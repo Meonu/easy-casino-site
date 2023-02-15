@@ -14,7 +14,7 @@ def index():
 def game():
     if "money" not in session:
         session["money"] = 10000
-    if session["money"] == 0 : 
+    if session["money"] <= 0 : 
         message = "You're bankrupt! I'll give you 100$..."
         session["money"] = 100
         return render_template("game.html", message=message, money=session["money"])
@@ -55,4 +55,4 @@ def buy_flag():
     return render_template("store.html", message=message, money=session["money"])
 
 if __name__ == "__main__":
-    app.run(debug=True, host="0.0.0.0", port=8078)
+    app.run(debug=False, host="0.0.0.0", port=8078)
