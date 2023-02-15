@@ -38,6 +38,8 @@ def game():
 
 @app.route("/store")
 def store():
+    if "money" not in session:
+        session["money"] = 10000
     return render_template("store.html", money=session["money"])
 
 @app.route("/buy_flag", methods=["POST"])
