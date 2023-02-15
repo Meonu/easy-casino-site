@@ -44,7 +44,7 @@ def buy_flag():
         session["money"] = 10000
     if session["money"] < 100000000:
         message = "Sorry, you don't have enough money to buy the flag."
-    else:
+    else: 
         session["money"] -= 100000000
         flag = "KCTF{w0w_y0u_4r3_und3rst4nd1ng_m1nus_V4lu3!}"
         message = "Congratulations, you bought the flag!" + str(flag) + "\nYour new balance is: $" + str(session["money"])
