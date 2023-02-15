@@ -14,6 +14,10 @@ def index():
 def game():
     if "money" not in session:
         session["money"] = 10000
+    if session["money"] == 0 : 
+        message = "You're bankrupt! I'll give you 100$..."
+        session["money"] = 100
+        return render_template("game.html", message=message, money=session["money"])
     if request.method == "POST":
         bet = int(request.form["bet"])
         number = int(request.form["number"])
