@@ -62,11 +62,20 @@ form input[type=submit]:hover {
     background-color: #006c80;
 }
 
-.alert {
+.win{
     margin-top: 20px;
     padding: 10px;
     background-color: #e4f4ae;
     color: #9787ee;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.lose{
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #f6d4d4;
+    color: #a03838;
     border-radius: 5px;
     font-size: 16px;
 }

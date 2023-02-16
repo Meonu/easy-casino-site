@@ -29,10 +29,12 @@ def game():
         if number == winning_number:
             session["money"] += bet
             message = "Congratulations, you won! Your new balance is: $" + str(session["money"]) + "(+" + str(bet) + ")"
+            condition = "win"
         else:
             session["money"] -= bet
             message = "Sorry, you lost. Your new balance is: $" + str(session["money"])
-        return render_template("game.html", message=message, money=session["money"])
+            condition = "lose"
+        return render_template("game.html", message=message,condition=condition, money=session["money"])
     else:
         return render_template("game.html", money=session["money"])
 

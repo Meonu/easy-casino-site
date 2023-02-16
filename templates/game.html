@@ -15,8 +15,11 @@
             <input type="number" name="number" min="1" required>
             <input type="submit" value="Place Bet">
         </form>
-        {% if message %}
-        <div class="alert">{{ message }}</div>
+        {% if condition == "lose" %}
+        <div class="lose">{{ message }}</div>
+        {% endif %}
+        {% if condition == "win" %}
+        <div class="win">{{ message }}</div>
         {% endif %}
     </div>
     <p><a href="/">Back to Home</a></p>
